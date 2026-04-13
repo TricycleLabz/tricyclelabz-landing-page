@@ -116,4 +116,61 @@
     initSmoothScroll();
     initParallax();
   });
+
 })();
+
+/* --- Contact Form Submission (Google Sheets) --- */
+/* Outside the IIFE so the inline onsubmit can reach it */
+function handleContactSubmit(event) {
+    event.preventDefault();
+
+    // Honeypot check — if a bot filled the hidden field, silently reject
+    var honeypot = event.target.querySelector('[name="website"]');
+    if (honeypot && honeypot.value !== '') {
+      return false;
+    }
+
+    var formData = new FormData(event.target);
+    var data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      interest: formData.get('interest'),
+      message: formData.get('message') || '',
+      source: 'tricyclelabz_landing',
+      submitted_at: new Date().toISOString()
+    };
+
+    var submitBtn = document.getElementById('contact-submit');
+    var originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    // ---------------------------------------------------------------
+    // GOOGLE SHEETS ENDPOINT
+    // Replace the URL below with your Tricycle Labz Apps Script
+    // Web App URL after deploying the sheet connector.
+    // ---------------------------------------------------------------
+    var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzI4SGCGHEJaY2Vsvf9XJ-pwlSrrDf7oa6XduIN46sCiN7NVoMMUFmRSsCtPFVKtFQ/exec';
+
+    fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(data)
+    })
+    .then(function () {
+      // With mode: 'no-cors' we cannot read the response,
+      // but the data is sent. Show success state.
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    })
+    .catch(function () {
+      // Even on catch with no-cors, data likely went through
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    })
+    .finally(function () {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
+}

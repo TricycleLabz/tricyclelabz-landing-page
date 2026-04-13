@@ -1,0 +1,426 @@
+<!--
+  Tricycle Labz — Landing Page
+
+  Suggested folder structure:
+  /
+  ├── index.html
+  ├── styles.css
+  ├── script.js
+  └── CNAME (optional, for custom domain)
+
+  Alternate headline options:
+
+  1. "Science meets speed. Products meet people."
+     Sub: "We build AI-native products grounded in neuroscience and psychology ... designed to help people and families adapt, evolve, and thrive."
+
+  2. "Three minds. One studio. Products that matter."
+     Sub: "Tricycle Labz is a venture studio combining scientific depth, technical execution, and product intuition to build AI products for human flourishing."
+
+  3. "Built on science. Shipped with conviction."
+     Sub: "We design, validate, and launch AI-powered products that support emotional wellness, family life, and meaningful behaviour change."
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tricycle Labz — Science-Grounded AI Venture Studio</title>
+  <meta name="description" content="Tricycle Labz builds science-grounded AI products that help people and families adapt, evolve, and thrive.">
+  <meta property="og:title" content="Tricycle Labz — Science-Grounded AI Venture Studio">
+  <meta property="og:description" content="We build AI-native products grounded in neuroscience and psychology, designed to help people and families adapt, evolve, and thrive.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg class="nav-logo-mark" viewBox="0 0 40 40" width="32" height="32" fill="none">
+          <circle cx="12" cy="26" r="8" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="28" cy="26" r="8" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="20" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span class="nav-logo-text">Tricycle Labz</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#contact" class="nav-link nav-link--cta">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-label reveal">AI Venture Studio</div>
+        <h1 class="hero-title reveal">
+          Science meets speed.<br>
+          <em>Products meet people.</em>
+        </h1>
+        <p class="hero-sub reveal">
+          We build AI-native products grounded in neuroscience and psychology ...
+          designed to help people and families adapt, evolve, and thrive.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#contact" class="btn btn--primary">Partner with us</a>
+          <a href="#products" class="btn btn--secondary">See what we're building</a>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <div class="hero-emblem">
+          <svg viewBox="0 0 320 320" fill="none" class="hero-emblem-svg">
+            <circle cx="100" cy="210" r="65" stroke="var(--sand)" stroke-width="1" opacity="0.6"/>
+            <circle cx="220" cy="210" r="65" stroke="var(--sand)" stroke-width="1" opacity="0.6"/>
+            <circle cx="160" cy="100" r="65" stroke="var(--ochre)" stroke-width="1.5" opacity="0.8"/>
+            <line x1="160" y1="100" x2="100" y2="210" stroke="var(--sand)" stroke-width="0.5" opacity="0.3"/>
+            <line x1="160" y1="100" x2="220" y2="210" stroke="var(--sand)" stroke-width="0.5" opacity="0.3"/>
+            <line x1="100" y1="210" x2="220" y2="210" stroke="var(--sand)" stroke-width="0.5" opacity="0.3"/>
+            <circle cx="160" cy="100" r="3" fill="var(--ochre)" opacity="0.9"/>
+            <circle cx="100" cy="210" r="3" fill="var(--sand)" opacity="0.7"/>
+            <circle cx="220" cy="210" r="3" fill="var(--sand)" opacity="0.7"/>
+            <!-- Orbital rings -->
+            <circle cx="160" cy="160" r="110" stroke="var(--sand)" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 8"/>
+            <circle cx="160" cy="160" r="140" stroke="var(--sand)" stroke-width="0.5" opacity="0.08" stroke-dasharray="2 12"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- What We Are -->
+  <section class="section section--what" id="about">
+    <div class="container">
+      <div class="section-grid section-grid--asymmetric">
+        <div class="section-label-col">
+          <span class="section-label reveal">What We Are</span>
+        </div>
+        <div class="section-content-col">
+          <h2 class="section-title reveal">A venture studio that builds from first principles.</h2>
+          <p class="section-text reveal">
+            Tricycle Labz is not an agency, consultancy, or accelerator. We are a product-focused
+            venture studio that rapidly designs, validates, and launches AI-native products ...
+            especially in emotional wellness, family life, education, and behaviour change.
+          </p>
+          <p class="section-text reveal">
+            Every product begins with a real human need, is shaped by scientific research,
+            and is built with the speed and discipline of a startup that ships.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider">
+      <svg viewBox="0 0 120 40" fill="none" class="divider-motif">
+        <circle cx="30" cy="20" r="12" stroke="var(--sand)" stroke-width="0.75" opacity="0.3"/>
+        <circle cx="60" cy="20" r="12" stroke="var(--sand)" stroke-width="0.75" opacity="0.3"/>
+        <circle cx="90" cy="20" r="12" stroke="var(--sand)" stroke-width="0.75" opacity="0.3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Why We Exist -->
+  <section class="section section--why">
+    <div class="container">
+      <div class="section-grid section-grid--asymmetric">
+        <div class="section-label-col">
+          <span class="section-label reveal">Why We Exist</span>
+        </div>
+        <div class="section-content-col">
+          <h2 class="section-title reveal">Technology should support human flourishing ... not just capture attention.</h2>
+          <p class="section-text reveal">
+            Most consumer technology is optimised for engagement, not development.
+            We believe AI creates an opportunity to invert that ... to build products
+            that genuinely help people grow, reflect, and connect.
+          </p>
+          <p class="section-text reveal">
+            Our work is grounded in neuroscience, psychology, and behavioural science.
+            Not as marketing language, but as the foundation for every product decision
+            we make.
+          </p>
+          <div class="pillars reveal">
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="18" r="10" stroke="var(--ochre)" stroke-width="1.5"/>
+                  <path d="M14 38c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="var(--ochre)" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Scientific Depth</h3>
+              <p class="pillar-text">Products rooted in research, not intuition alone.</p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <rect x="10" y="10" width="28" height="28" rx="4" stroke="var(--ochre)" stroke-width="1.5"/>
+                  <path d="M18 24h12M24 18v12" stroke="var(--ochre)" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Technical Execution</h3>
+              <p class="pillar-text">From prototype to production with precision.</p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <path d="M24 8l14 24H10L24 8z" stroke="var(--ochre)" stroke-width="1.5" stroke-linejoin="round"/>
+                  <circle cx="24" cy="22" r="4" stroke="var(--ochre)" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Product Intuition</h3>
+              <p class="pillar-text">Knowing what to build, and what to kill.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section section--products" id="products">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Current Builds</span>
+        <h2 class="section-title">Products in motion.</h2>
+        <p class="section-text section-text--narrow">
+          Each product in our portfolio began as a hypothesis, was validated through
+          research, and is being built to ship.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Loomi -->
+        <div class="product-card reveal">
+          <div class="product-card-inner">
+            <div class="product-card-header">
+              <div class="product-icon product-icon--loomi">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <circle cx="24" cy="20" r="12" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M16 36c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="20" cy="18" r="1.5" fill="currentColor"/>
+                  <circle cx="28" cy="18" r="1.5" fill="currentColor"/>
+                  <path d="M21 23c1 1.5 5 1.5 6 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="product-status">Active</span>
+            </div>
+            <h3 class="product-title">Loomi</h3>
+            <p class="product-tagline">Bedtime, reimagined for growing minds.</p>
+            <p class="product-description">
+              A children's bedtime product that uses stories and affirmations to support calm,
+              confidence, and family rituals. Grounded in neuroscience, sleep science, and
+              emotional development research.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag">Sleep Science</span>
+              <span class="product-tag">Emotional Development</span>
+              <span class="product-tag">Family Rituals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BrainFit -->
+        <div class="product-card reveal">
+          <div class="product-card-inner">
+            <div class="product-card-header">
+              <div class="product-icon product-icon--brainfit">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <path d="M24 8C16 8 10 14 10 22c0 6 3 11 8 14v4h12v-4c5-3 8-8 8-14 0-8-6-14-14-14z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M18 40h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M20 22c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="product-status">Active</span>
+            </div>
+            <h3 class="product-title">BrainFit</h3>
+            <p class="product-tagline">Emotional wellness, made practical.</p>
+            <p class="product-description">
+              An emotional wellness product combining mood tracking with psychologically
+              informed interventions. Focused on self-awareness, emotional regulation,
+              and meaningful behaviour change.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag">Mood Tracking</span>
+              <span class="product-tag">Behaviour Change</span>
+              <span class="product-tag">Emotional Regulation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pipeline -->
+        <div class="product-card product-card--pipeline reveal">
+          <div class="product-card-inner">
+            <div class="product-card-header">
+              <div class="product-icon product-icon--pipeline">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <circle cx="16" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="32" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="32" cy="32" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="20" y1="23" x2="28" y2="17" stroke="currentColor" stroke-width="1"/>
+                  <line x1="20" y1="25" x2="28" y2="31" stroke="currentColor" stroke-width="1"/>
+                </svg>
+              </div>
+              <span class="product-status product-status--pipeline">In Development</span>
+            </div>
+            <h3 class="product-title">Studio Pipeline</h3>
+            <p class="product-tagline">What's next.</p>
+            <p class="product-description">
+              An active pipeline of AI-native product experiments across consumer wellness,
+              learning, reflection, and utility. Each concept is rigorously tested before
+              earning continued investment.
+            </p>
+            <div class="product-tags">
+              <span class="product-tag">Consumer Wellness</span>
+              <span class="product-tag">Learning</span>
+              <span class="product-tag">Utility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why This Team -->
+  <section class="section section--team">
+    <div class="container">
+      <div class="section-grid section-grid--asymmetric">
+        <div class="section-label-col">
+          <span class="section-label reveal">Why This Team</span>
+        </div>
+        <div class="section-content-col">
+          <h2 class="section-title reveal">Three founders. Three disciplines. One studio.</h2>
+          <p class="section-text reveal">
+            Tricycle Labz was founded by three brothers whose strengths are complementary
+            by design, not coincidence. Neuroscience and psychology. Technical product and
+            engineering. Business and strategy.
+          </p>
+          <p class="section-text reveal">
+            This means every product is shaped by scientific rigour, built with
+            engineering discipline, and positioned with strategic clarity ... from day one.
+          </p>
+          <div class="team-grid reveal">
+            <div class="team-discipline">
+              <div class="team-discipline-marker"></div>
+              <h4>Science</h4>
+              <p>Neuroscience &amp; psychology research informing every product hypothesis and intervention design.</p>
+            </div>
+            <div class="team-discipline">
+              <div class="team-discipline-marker"></div>
+              <h4>Engineering</h4>
+              <p>Technical product leadership with deep experience shipping consumer products at scale.</p>
+            </div>
+            <div class="team-discipline">
+              <div class="team-discipline-marker"></div>
+              <h4>Strategy</h4>
+              <p>Business acumen driving go-to-market, positioning, and sustainable growth from the start.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section--process" id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">How We Work</span>
+        <h2 class="section-title">Disciplined experimentation. Rapid iteration.</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="process-step-number">01</div>
+          <div class="process-step-content">
+            <h3>Insight</h3>
+            <p>Identify a real human need backed by scientific literature and lived experience.</p>
+          </div>
+        </div>
+        <div class="process-connector reveal"></div>
+        <div class="process-step reveal">
+          <div class="process-step-number">02</div>
+          <div class="process-step-content">
+            <h3>Prototype</h3>
+            <p>Build the smallest version that tests the core hypothesis. Ship fast, learn faster.</p>
+          </div>
+        </div>
+        <div class="process-connector reveal"></div>
+        <div class="process-step reveal">
+          <div class="process-step-number">03</div>
+          <div class="process-step-content">
+            <h3>Validate</h3>
+            <p>Put it in front of real people. Measure what matters. Listen to what the data says.</p>
+          </div>
+        </div>
+        <div class="process-connector reveal"></div>
+        <div class="process-step reveal">
+          <div class="process-step-number">04</div>
+          <div class="process-step-content">
+            <h3>Refine or Kill</h3>
+            <p>Double down on what works. Walk away from what doesn't. No sunk-cost thinking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--cta" id="contact">
+    <div class="container">
+      <div class="cta-content reveal">
+        <div class="cta-motif">
+          <svg viewBox="0 0 200 200" fill="none">
+            <circle cx="65" cy="130" r="40" stroke="var(--ochre)" stroke-width="1" opacity="0.4"/>
+            <circle cx="135" cy="130" r="40" stroke="var(--ochre)" stroke-width="1" opacity="0.4"/>
+            <circle cx="100" cy="70" r="40" stroke="var(--ochre)" stroke-width="1.5" opacity="0.6"/>
+          </svg>
+        </div>
+        <h2 class="cta-title">Let's build something that matters.</h2>
+        <p class="cta-text">
+          We're looking for investors who think long-term, partners who share our values,
+          and exceptional builders who want to do meaningful work.
+        </p>
+        <a href="mailto:hello@tricyclelabz.com" class="btn btn--primary btn--large">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <svg class="footer-logo-mark" viewBox="0 0 40 40" width="28" height="28" fill="none">
+            <circle cx="12" cy="26" r="8" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="28" cy="26" r="8" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="20" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <span class="footer-name">Tricycle Labz</span>
+        </div>
+        <p class="footer-tagline">Science-grounded AI products for human flourishing.</p>
+        <div class="footer-bottom">
+          <span class="footer-copy">&copy; 2026 Tricycle Labz. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

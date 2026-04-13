@@ -150,7 +150,7 @@ function handleContactSubmit(event) {
     // Replace the URL below with your Tricycle Labz Apps Script
     // Web App URL after deploying the sheet connector.
     // ---------------------------------------------------------------
-    var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwKe5Umc8ycKbzycC-l4Ap1xYPzUK0Yqv5mPaKFZdrP5bL71AVznvz7v5RoEQAscS7hzg/exec';
+    var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwF6jvOvYqc5xp6TqeqQQ6IbepZZBSIVTQ7Q8pBlREIUw9wlpFvODeocyL9FzvF4X7dUw/exec';
 
     fetch(SHEETS_URL, {
       method: 'POST',

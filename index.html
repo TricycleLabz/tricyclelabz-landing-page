@@ -1,474 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <title>Tricycle Labz — AI Products for Human Flourishing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Tricycle Labz is a venture studio building AI-native products that help everyday people increase self-awareness, agency, and productivity.">
   <meta property="og:title" content="Tricycle Labz — AI Products for Human Flourishing">
-  <meta property="og:description" content="A venture studio building AI-native products grounded in neuroscience and psychology. Founded by three brothers. Fully bootstrapped.">
+  <meta property="og:description" content="Three brothers, one studio. Building niche AI-native tools for self-awareness, agency, and everyday potential. Bootstrapped by choice.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <svg class="nav-logo-mark" viewBox="0 0 40 40" width="32" height="32" fill="none">
-          <circle cx="12" cy="26" r="8" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="28" cy="26" r="8" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="20" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-        <span class="nav-logo-text">Tricycle Labz</span>
+  <!-- ============ NAV ============ -->
+  <nav class="t-nav">
+    <div class="t-nav-inner">
+      <a href="#" class="t-nav-brand">
+        <img src="brand/logo.png" alt="Tricycle Labz">
+        <span class="wordmark">Tricycle Labz</span>
       </a>
-      <div class="nav-links" id="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#ventures" class="nav-link">Ventures</a>
-        <a href="#team" class="nav-link">Team</a>
-        <a href="#contact" class="nav-link nav-link--cta">Get in Touch</a>
+      <div class="t-nav-links" id="nav-links">
+        <a href="#approach">Approach</a>
+        <a href="#focus">Focus</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#story">Story</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <a href="#contact" class="t-btn t-btn-primary">Get in touch <span>&rarr;</span></a>
+      <button class="t-nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-gradient"></div>
+  <!-- ============ HERO — EDITORIAL ============ -->
+  <header class="ed-hero">
+    <div class="ed-hero-meta reveal">
+      <span class="ed-eyebrow"><span class="dot"></span> Tricycle Labz &middot; Venture studio</span>
+      <span class="ed-meta-r">Vol. 01 &middot; No. 01 &middot; Vancouver / Joshua Tree</span>
     </div>
-    <div class="hero-content">
-      <div class="hero-left">
-        <div class="hero-label reveal">AI Venture Studio</div>
-        <h1 class="hero-title reveal">
-          AI products for<br>
-          <span class="hero-title-accent">human flourishing.</span>
-        </h1>
-        <p class="hero-sub reveal">
-          We build AI-native products that help everyday people increase
-          self-awareness, agency, and productivity. Founded by three brothers.
-          Fully bootstrapped. Shaped by real demand.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="#contact" class="btn btn--primary">Partner with us</a>
-          <a href="#ventures" class="btn btn--secondary">See what we're building</a>
-        </div>
+    <h1 class="ed-h1 reveal">
+      Venture studio building niche AI-native tools for<br>
+      self-awareness, agency, and <span class="ed-em">everyday potential.</span>
+    </h1>
+    <div class="ed-hero-grid">
+      <div class="ed-hero-figure reveal">
+        <!-- Three-lens Venn — Scientist / Strategist / Innovator -->
+        <svg viewBox="0 0 600 540" preserveAspectRatio="xMidYMid meet">
+          <circle cx="220" cy="240" r="158" fill="#F2C441" fill-opacity="0.32" stroke="#1A1817" stroke-width="2"/>
+          <circle cx="380" cy="240" r="158" fill="#1E3060" fill-opacity="0.22" stroke="#1A1817" stroke-width="2"/>
+          <circle cx="300" cy="370" r="158" fill="#3D7A4A" fill-opacity="0.28" stroke="#1A1817" stroke-width="2"/>
+          <!-- Labels -->
+          <text x="76" y="98" font-family="var(--mono)" font-size="11" letter-spacing="2.5" fill="#1A1817">SCIENTIST</text>
+          <text x="430" y="98" font-family="var(--mono)" font-size="11" letter-spacing="2.5" fill="#1A1817">STRATEGIST</text>
+          <text x="240" y="514" font-family="var(--mono)" font-size="11" letter-spacing="2.5" fill="#1A1817">INNOVATOR</text>
+          <line x1="76" y1="106" x2="160" y2="106" stroke="#1A1817" stroke-width="1"/>
+          <line x1="430" y1="106" x2="520" y2="106" stroke="#1A1817" stroke-width="1"/>
+          <line x1="240" y1="522" x2="335" y2="522" stroke="#1A1817" stroke-width="1"/>
+          <!-- Scientist character — crosshair -->
+          <g transform="translate(140, 160)">
+            <circle r="28" fill="#FBF9F4" stroke="#1A1817" stroke-width="2"/>
+            <circle r="6" fill="#F2C441"/>
+            <line x1="-34" y1="0" x2="-14" y2="0" stroke="#1A1817" stroke-width="1.5"/>
+            <line x1="14" y1="0" x2="34" y2="0" stroke="#1A1817" stroke-width="1.5"/>
+            <line x1="0" y1="-34" x2="0" y2="-14" stroke="#1A1817" stroke-width="1.5"/>
+            <line x1="0" y1="14" x2="0" y2="34" stroke="#1A1817" stroke-width="1.5"/>
+          </g>
+          <!-- Strategist character — nested squares -->
+          <g transform="translate(460, 160)">
+            <rect x="-28" y="-28" width="56" height="56" fill="#FBF9F4" stroke="#1A1817" stroke-width="2"/>
+            <rect x="-16" y="-16" width="32" height="32" fill="none" stroke="#1A1817" stroke-width="1.5"/>
+            <rect x="-6" y="-6" width="12" height="12" fill="#1E3060"/>
+          </g>
+          <!-- Innovator character — triangle -->
+          <g transform="translate(300, 444)">
+            <polygon points="0,-28 30,24 -30,24" fill="#FBF9F4" stroke="#1A1817" stroke-width="2"/>
+            <polygon points="0,-10 16,16 -16,16" fill="#3D7A4A"/>
+          </g>
+          <!-- Connector dashes -->
+          <line x1="118" y1="106" x2="140" y2="132" stroke="#1A1817" stroke-width="1" stroke-dasharray="2 3"/>
+          <line x1="475" y1="106" x2="460" y2="132" stroke="#1A1817" stroke-width="1" stroke-dasharray="2 3"/>
+          <line x1="288" y1="522" x2="300" y2="472" stroke="#1A1817" stroke-width="1" stroke-dasharray="2 3"/>
+          <!-- Centre convergence -->
+          <g transform="translate(300, 285)">
+            <circle r="42" fill="#F8F5F0" stroke="#DC4A3C" stroke-width="2" stroke-dasharray="3 4"/>
+            <circle r="22" fill="#DC4A3C"/>
+            <circle r="6" fill="#F8F5F0"/>
+          </g>
+          <text x="300" y="355" text-anchor="middle" font-family="var(--mono)" font-size="9.5" letter-spacing="2.5" fill="#1A1817" opacity="0.7">TRICYCLE</text>
+        </svg>
       </div>
-      <div class="hero-right reveal">
-        <div class="hero-emblem">
-          <svg viewBox="0 0 320 320" fill="none" class="hero-emblem-svg">
-            <!-- Triad circles — Scientist (navy), Strategist (red), Innovator (green) -->
-            <circle class="circle-scientist" cx="100" cy="210" r="65" stroke-width="1.5" opacity="0.5"/>
-            <circle class="circle-strategist" cx="220" cy="210" r="65" stroke-width="1.5" opacity="0.5"/>
-            <circle class="circle-innovator" cx="160" cy="100" r="65" stroke-width="1.5" opacity="0.5"/>
-            <!-- Connective lines -->
-            <line x1="160" y1="100" x2="100" y2="210" stroke="var(--charcoal)" stroke-width="0.5" opacity="0.1"/>
-            <line x1="160" y1="100" x2="220" y2="210" stroke="var(--charcoal)" stroke-width="0.5" opacity="0.1"/>
-            <line x1="100" y1="210" x2="220" y2="210" stroke="var(--charcoal)" stroke-width="0.5" opacity="0.1"/>
-            <!-- Nodes -->
-            <circle class="dot-innovator" cx="160" cy="100" r="4" opacity="0.8"/>
-            <circle class="dot-scientist" cx="100" cy="210" r="4" opacity="0.8"/>
-            <circle class="dot-strategist" cx="220" cy="210" r="4" opacity="0.8"/>
-            <!-- Orbital rings -->
-            <circle cx="160" cy="160" r="120" stroke="var(--charcoal)" stroke-width="0.5" opacity="0.06" stroke-dasharray="4 8"/>
+      <div>
+        <p class="ed-lede reveal">Three brothers, one studio. We test ideas in public, fast, and only build what people pull on. Bootstrapped by choice ... every venture earns its own demand.</p>
+        <div class="ed-hero-cta reveal">
+          <a href="#contact" class="t-btn t-btn-primary">Get in touch <span>&rarr;</span></a>
+          <a href="#ventures" class="t-btn-text">See ventures</a>
+        </div>
+        <dl class="ed-stats reveal">
+          <div><dt>Ventures</dt><dd>8 &middot; in motion</dd></div>
+          <div><dt>Capital</dt><dd>Bootstrapped</dd></div>
+          <div><dt>Founded</dt><dd>2026</dd></div>
+        </dl>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ 01 APPROACH ============ -->
+  <section id="approach" class="sec reveal">
+    <div class="sec-head">
+      <div class="sec-num">01 / Approach</div>
+      <h2>High iteration. Low ego. Customer-pulled.</h2>
+      <div class="sec-meta">Bootstrapped &middot; No VC</div>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-cell">
+        <div class="approach-num">01</div>
+        <h3>Test in public</h3>
+        <p>Landing pages, prototypes, demos. We put a value proposition into the world before we build the thing.</p>
+      </div>
+      <div class="approach-cell">
+        <div class="approach-num">02</div>
+        <h3>Follow real demand</h3>
+        <p>Waitlist signups, paid pilots, recurring use. If a venture isn't pulled on, we kill it and move.</p>
+      </div>
+      <div class="approach-cell">
+        <div class="approach-num">03</div>
+        <h3>Compounding cycles</h3>
+        <p>Every cycle gets faster. AI builds the page, the demo, the explainer. We refine the pull, not the polish.</p>
+      </div>
+      <div class="approach-cell">
+        <div class="approach-num">04</div>
+        <h3>No outside capital</h3>
+        <p>Bootstrapped by choice. Venture timelines distort signal. We follow the customer, not the clock.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 FOCUS ============ -->
+  <section id="focus" class="sec reveal">
+    <div class="sec-head">
+      <div class="sec-num">02 / Focus</div>
+      <h2>Three problems
+worth choosing.</h2>
+      <div class="sec-meta">Consumer technology for human flourishing</div>
+    </div>
+    <div class="focus-grid">
+      <!-- Development -->
+      <article class="focus-card" style="border-color: var(--saffron);">
+        <div class="focus-cat" style="color: var(--saffron);"><span class="dot" style="background: var(--saffron);"></span> 01 / Development</div>
+        <div class="focus-vis">
+          <svg viewBox="0 0 280 200" preserveAspectRatio="xMidYMid meet">
+            <circle cx="70" cy="150" r="36" fill="#F2C441"/>
+            <circle cx="140" cy="125" r="26" fill="#1A1817"/>
+            <circle cx="195" cy="105" r="18" fill="#F2C441"/>
+            <circle cx="235" cy="92" r="11" fill="#1A1817"/>
           </svg>
         </div>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- What We Are -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-grid section-grid--asymmetric">
-        <div class="section-label-col">
-          <span class="section-label reveal">What We Are</span>
+        <h3>Human development
+&amp; learning</h3>
+        <p>Tools that shape how people grow over time ... a child's emotional foundation, an adult's decision quality, a singer's muscle memory.</p>
+        <ul class="focus-tags">
+          <li>Loomi</li>
+          <li>Vocal Trace</li>
+          <li>Roundtable</li>
+        </ul>
+      </article>
+      <!-- Relationships -->
+      <article class="focus-card" style="border-color: var(--navy);">
+        <div class="focus-cat" style="color: var(--navy);"><span class="dot" style="background: var(--navy);"></span> 02 / Relationships</div>
+        <div class="focus-vis">
+          <svg viewBox="0 0 280 200" preserveAspectRatio="xMidYMid meet">
+            <circle cx="105" cy="100" r="46" fill="#1E3060" opacity="0.7"/>
+            <circle cx="175" cy="100" r="46" fill="#DC4A3C" opacity="0.7"/>
+            <circle cx="140" cy="100" r="6" fill="#1A1817"/>
+          </svg>
         </div>
-        <div class="section-content-col">
-          <h2 class="section-title reveal">Consumer technology for human psychological flourishing.</h2>
-          <p class="section-text reveal">
-            Tricycle Labz is a venture studio building AI-native products that help
-            everyday people increase self-awareness, agency, and productivity. We take
-            a high-iteration, low-ego, deeply customer-centred approach to building.
-          </p>
-          <p class="section-text reveal">
-            Rather than guessing what people want, we test lightweight concepts early
-            through landing pages, messaging, and simple demos ... then follow real
-            demand signals. We are intentionally fully bootstrapped, with no venture capital,
-            to ensure each venture is shaped by genuine customer demand rather than
-            artificial momentum.
-          </p>
+        <h3>Relationships &amp;
+communication</h3>
+        <p>Tools that decode how people affect each other ... where miscommunication compounds, where repair is possible. The relationship as the unit, not the individual.</p>
+        <ul class="focus-tags">
+          <li>Unison</li>
+          <li>Undertone</li>
+        </ul>
+      </article>
+      <!-- Self-knowledge -->
+      <article class="focus-card" style="border-color: var(--forest);">
+        <div class="focus-cat" style="color: var(--forest);"><span class="dot" style="background: var(--forest);"></span> 03 / Self-knowledge</div>
+        <div class="focus-vis">
+          <svg viewBox="0 0 280 200" preserveAspectRatio="xMidYMid meet">
+            <circle cx="140" cy="100" r="80" fill="none" stroke="#3D7A4A" stroke-width="2"/>
+            <circle cx="140" cy="100" r="56" fill="none" stroke="#3D7A4A" stroke-width="2"/>
+            <circle cx="140" cy="100" r="32" fill="#3D7A4A"/>
+            <circle cx="140" cy="100" r="6" fill="#F8F5F0"/>
+          </svg>
         </div>
-      </div>
-    </div>
-    <div class="section-divider">
-      <div class="divider-bar"></div>
-    </div>
-  </section>
-
-  <!-- Focus Areas -->
-  <section class="section section--warm">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Focus</span>
-        <h2 class="section-title">Three domains. One conviction.</h2>
-        <p class="section-text section-text--narrow">
-          We build across these areas because we kept finding the same thing in each:
-          people are trying to do better, and the tools they have are not good enough.
-        </p>
-      </div>
-      <div class="focus-areas">
-        <div class="focus-area reveal">
-          <div class="focus-area-number">01</div>
-          <h3 class="focus-area-title">Human Development &amp; Learning</h3>
-          <p class="focus-area-text">
-            Tools that shape how people grow over time ... whether that is a child's emotional
-            foundation, an adult's decision-making quality, or a singer's muscle memory.
-          </p>
-        </div>
-        <div class="focus-area reveal">
-          <div class="focus-area-number">02</div>
-          <h3 class="focus-area-title">Relationships</h3>
-          <p class="focus-area-text">
-            Tools that decode how people affect each other, where miscommunication compounds,
-            and where repair is possible. The relationship as the unit of intervention.
-          </p>
-        </div>
-        <div class="focus-area reveal">
-          <div class="focus-area-number">03</div>
-          <h3 class="focus-area-title">Self-Knowledge</h3>
-          <p class="focus-area-text">
-            Tools that convert internal experience into observable, actionable signal.
-            The user cannot see themselves clearly ... these products are the mirror.
-          </p>
-        </div>
-      </div>
+        <h3>Self-knowledge
+&amp; agency</h3>
+        <p>Tools that convert internal experience into observable signal. The user can't see themselves clearly. These products are the mirror.</p>
+        <ul class="focus-tags">
+          <li>You.OS</li>
+          <li>Fetch Bites</li>
+          <li>BrainFit</li>
+        </ul>
+      </article>
     </div>
   </section>
 
-  <!-- Ventures -->
-  <section class="section" id="ventures">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Ventures</span>
-        <h2 class="section-title">Products in motion.</h2>
-        <p class="section-text section-text--narrow">
-          Each venture began as a hypothesis, was tested against real demand,
-          and earned its continued investment.
-        </p>
-      </div>
+  <!-- ============ 03 VENTURES — CAROUSEL ============ -->
+  <section id="ventures" class="sec reveal">
+    <div class="sec-head">
+      <div class="sec-num">03 / Ventures</div>
+      <h2>Several bets,
+each its own room.</h2>
+      <div class="sec-meta">2026 &middot; in motion</div>
+    </div>
+    <div class="v-carousel">
+      <div class="v-track" id="v-track" tabindex="0">
 
-      <div class="ventures-grid">
         <!-- Loomi -->
-        <div class="venture-card reveal">
-          <div class="venture-card-inner">
-            <div class="venture-card-header">
-              <h3 class="venture-name">Loomi</h3>
-              <span class="venture-category">Development</span>
-            </div>
-            <p class="venture-oneliner">
-              Bedtime stories that quietly build confidence and calm in young children.
-            </p>
-            <div class="venture-accent venture-accent--navy"></div>
+        <article class="v-slide">
+          <div class="v-slide-vis" style="background: rgba(242,196,65,0.18);">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+              <path d="M 145 30 A 42 42 0 1 0 145 110 A 30 30 0 1 1 145 30 Z" fill="#DC4A3C" fill-opacity="0.35" stroke="#1A1817" stroke-width="2"/>
+              <circle cx="55" cy="40" r="2.5" fill="#1A1817"/><circle cx="88" cy="62" r="1.6" fill="#1A1817"/>
+              <circle cx="42" cy="80" r="2" fill="#1A1817"/><circle cx="72" cy="106" r="1.6" fill="#1A1817"/>
+              <path d="M 30 130 L 50 130 L 30 142 L 50 142" stroke="#1A1817" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            </svg>
           </div>
-        </div>
-
-        <!-- BrainFit -->
-        <div class="venture-card reveal">
-          <div class="venture-card-inner">
-            <div class="venture-card-header">
-              <h3 class="venture-name">BrainFit</h3>
-              <span class="venture-category">Self-Knowledge</span>
-            </div>
-            <p class="venture-oneliner">
-              Emotion tracking paired with voice-based interventions that meet you where you are.
-            </p>
-            <div class="venture-accent venture-accent--red"></div>
-          </div>
-        </div>
+          <div class="v-slide-meta"><span class="cat-dot" style="background:#F2C441;"></span> Development <span style="opacity:0.7">&middot; Live waitlist</span></div>
+          <h4>Loomi</h4>
+          <p>Bedtime stories that quietly build confidence and calm in young children.</p>
+          <div class="v-slide-foot">loomi.tricyclelabz.com</div>
+        </article>
 
         <!-- Roundtable -->
-        <div class="venture-card reveal">
-          <div class="venture-card-inner">
-            <div class="venture-card-header">
-              <h3 class="venture-name">Roundtable</h3>
-              <span class="venture-category">Learning</span>
-            </div>
-            <p class="venture-oneliner">
-              Brings big life questions into conversation with the world's greatest minds.
-            </p>
-            <div class="venture-accent venture-accent--forest"></div>
+        <article class="v-slide">
+          <div class="v-slide-vis" style="background: rgba(242,196,65,0.18);">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+              <ellipse cx="110" cy="92" rx="68" ry="22" fill="#DC4A3C" fill-opacity="0.18" stroke="#1A1817" stroke-width="2"/>
+              <circle cx="110" cy="38" r="9" fill="#1A1817"/><rect x="103" y="46" width="14" height="18" rx="3" fill="#1A1817"/>
+              <circle cx="48" cy="80" r="9" fill="#1A1817"/><rect x="41" y="88" width="14" height="18" rx="3" fill="#1A1817"/>
+              <circle cx="172" cy="80" r="9" fill="#1A1817"/><rect x="165" y="88" width="14" height="18" rx="3" fill="#1A1817"/>
+              <line x1="110" y1="56" x2="60" y2="80" stroke="#DC4A3C" stroke-width="1.5" stroke-dasharray="2 3"/>
+              <line x1="110" y1="56" x2="160" y2="80" stroke="#DC4A3C" stroke-width="1.5" stroke-dasharray="2 3"/>
+            </svg>
           </div>
-        </div>
+          <div class="v-slide-meta"><span class="cat-dot" style="background:#F2C441;"></span> Development <span style="opacity:0.7">&middot; Prototype</span></div>
+          <h4>Roundtable</h4>
+          <p>Brings big life questions into conversation with the world's greatest minds.</p>
+          <div class="v-slide-foot">roundtable.tricyclelabz.com</div>
+        </article>
+
+        <!-- Vocal Trace -->
+        <article class="v-slide">
+          <div class="v-slide-vis" style="background: rgba(242,196,65,0.18);">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+              <line x1="20" y1="40" x2="200" y2="40" stroke="#1A1817" stroke-width="1" opacity="0.25"/>
+              <line x1="20" y1="60" x2="200" y2="60" stroke="#1A1817" stroke-width="1" opacity="0.25"/>
+              <line x1="20" y1="80" x2="200" y2="80" stroke="#1A1817" stroke-width="1" opacity="0.25"/>
+              <line x1="20" y1="100" x2="200" y2="100" stroke="#1A1817" stroke-width="1" opacity="0.25"/>
+              <line x1="20" y1="120" x2="200" y2="120" stroke="#1A1817" stroke-width="1" opacity="0.25"/>
+              <path d="M 20 70 Q 60 70 100 70 T 200 70" stroke="#1A1817" stroke-width="1.2" stroke-dasharray="3 4" fill="none"/>
+              <path d="M 20 96 Q 50 50 78 78 T 130 60 Q 160 70 200 64" stroke="#DC4A3C" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <circle cx="78" cy="78" r="4" fill="#DC4A3C"/><circle cx="130" cy="60" r="4" fill="#DC4A3C"/>
+            </svg>
+          </div>
+          <div class="v-slide-meta"><span class="cat-dot" style="background:#F2C441;"></span> Development <span style="opacity:0.7">&middot; In design</span></div>
+          <h4>Vocal Trace</h4>
+          <p>Helps amateur singers train pitch through real-time visual feedback.</p>
+          <div class="v-slide-foot">vocaltrace.tricyclelabz.com</div>
+        </article>
 
         <!-- You.OS -->
-        <div class="venture-card reveal">
-          <div class="venture-card-inner">
-            <div class="venture-card-header">
-              <h3 class="venture-name">You.OS</h3>
-              <span class="venture-category">Self-Knowledge</span>
-            </div>
-            <p class="venture-oneliner">
-              A personal operating system for seeing the patterns that shape your life.
-            </p>
-            <div class="venture-accent venture-accent--saffron"></div>
+        <article class="v-slide">
+          <div class="v-slide-vis" style="background: rgba(61,122,74,0.12);">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+              <path d="M 35 40 L 70 28 L 105 50 L 98 88 L 55 80 L 35 40 M 105 50 L 142 36 L 180 52 L 145 78 L 142 36 M 98 88 L 128 116 L 82 122 L 55 80 M 145 78 L 175 128 L 128 116 M 180 52 L 188 96 L 175 128" stroke="#1A1817" stroke-width="0.9" fill="none" opacity="0.4"/>
+              <circle cx="35" cy="40" r="4" fill="#3D7A4A"/><circle cx="70" cy="28" r="2.5" fill="#1A1817"/>
+              <circle cx="105" cy="50" r="4" fill="#3D7A4A"/><circle cx="142" cy="36" r="2.5" fill="#1A1817"/>
+              <circle cx="180" cy="52" r="4" fill="#3D7A4A"/><circle cx="55" cy="80" r="2.5" fill="#1A1817"/>
+              <circle cx="98" cy="88" r="4" fill="#3D7A4A"/><circle cx="145" cy="78" r="2.5" fill="#1A1817"/>
+              <circle cx="128" cy="116" r="4" fill="#3D7A4A"/>
+            </svg>
+          </div>
+          <div class="v-slide-meta"><span class="cat-dot" style="background:#3D7A4A;"></span> Self-knowledge <span style="opacity:0.7">&middot; Concept</span></div>
+          <h4>You.OS</h4>
+          <p>A personal operating system for seeing the patterns that shape your life.</p>
+          <div class="v-slide-foot">youos.tricyclelabz.com</div>
+        </article>
+
+        <!-- Unison -->
+        <article class="v-slide">
+          <div class="v-slide-vis" style="background: rgba(30,48,96,0.10);">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+              <circle cx="82" cy="78" r="42" fill="none" stroke="#1A1817" stroke-width="3"/>
+              <circle cx="138" cy="78" r="42" fill="#1E3060" fill-opacity="0.18" stroke="#1A1817" stroke-width="3"/>
+              <path d="M 110 38 A 42 42 0 0 1 110 118" fill="none" stroke="#1E3060" stroke-width="3"/>
+              <path d="M 80 78 L 95 78 L 102 66 L 110 90 L 118 70 L 125 78 L 140 78" stroke="#1A1817" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="v-slide-meta"><span class="cat-dot" style="background:#1E3060;"></span> Relationships <span style="opacity:0.7">&middot; Concept</span></div>
+          <h4>Unison</h4>
+          <p>Relationship intelligence that helps couples spot patterns before they become fractures.</p>
+          <div class="v-slide-foot">unison.tricyclelabz.com</div>
+        </article>
+
+        <!-- Undertone -->
+        <article class="v-slide">
+          <div class="v-slide-vis" style="background: rgba(30,48,96,0.10);">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+              <path d="M 25 25 Q 25 15 35 15 L 100 15 Q 110 15 110 25 L 110 58 Q 110 68 100 68 L 56 68 L 42 82 L 47 68 L 35 68 Q 25 68 25 58 Z" fill="none" stroke="#1A1817" stroke-width="2"/>
+              <path d="M 95 62 Q 95 52 105 52 L 185 52 Q 195 52 195 62 L 195 102 Q 195 112 185 112 L 140 112 L 124 128 L 130 112 L 105 112 Q 95 112 95 102 Z" fill="#1E3060" fill-opacity="0.28" stroke="#1A1817" stroke-width="2"/>
+              <line x1="38" y1="32" x2="98" y2="32" stroke="#1A1817" stroke-width="1.4"/>
+              <line x1="38" y1="44" x2="86" y2="44" stroke="#1A1817" stroke-width="1.4"/>
+              <line x1="38" y1="56" x2="92" y2="56" stroke="#1A1817" stroke-width="1.4"/>
+              <path d="M 108 82 Q 120 72 132 82 T 156 82 T 180 82" stroke="#1E3060" stroke-width="2" fill="none"/>
+              <path d="M 108 96 Q 120 88 132 96 T 156 96 T 180 96" stroke="#1E3060" stroke-width="2" fill="none" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="v-slide-meta"><span class="cat-dot" style="background:#1E3060;"></span> Relationships <span style="opacity:0.7">&middot; Concept</span></div>
+          <h4>Undertone</h4>
+          <p>Catches the tones and phrasings that quietly shape your relationships.</p>
+          <div class="v-slide-foot">undertone.tricyclelabz.com</div>
+        </article>
+
+        <!-- Fetch Bites -->
+        <article class="v-slide">
+          <div class="v-slide-vis" style="background: rgba(61,122,74,0.12);">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+              <path d="M 55 96 Q 55 130 110 130 Q 165 130 165 96 Z" fill="#3D7A4A" fill-opacity="0.28" stroke="#1A1817" stroke-width="2"/>
+              <ellipse cx="110" cy="96" rx="55" ry="7" fill="none" stroke="#1A1817" stroke-width="2"/>
+              <path d="M 85 72 Q 80 62 85 50 Q 90 38 85 26" stroke="#1A1817" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M 110 72 Q 105 62 110 50 Q 115 38 110 26" stroke="#1A1817" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M 135 72 Q 130 62 135 50 Q 140 38 135 26" stroke="#1A1817" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="40" cy="40" r="14" fill="#1A1817"/>
+              <polygon points="36,33 36,47 48,40" fill="#3D7A4A"/>
+            </svg>
+          </div>
+          <div class="v-slide-meta"><span class="cat-dot" style="background:#3D7A4A;"></span> Self-knowledge <span style="opacity:0.7">&middot; In design</span></div>
+          <h4>Fetch Bites</h4>
+          <p>Turns recipe reels into clean, usable recipes and personal cookbooks.</p>
+          <div class="v-slide-foot">fetchbites.tricyclelabz.com</div>
+        </article>
+
+        <!-- BrainFit -->
+        <article class="v-slide">
+          <div class="v-slide-vis" style="background: rgba(61,122,74,0.12);">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+              <path d="M 75 76 Q 62 56 78 46 Q 82 30 102 36 Q 112 24 128 32 Q 148 30 152 50 Q 168 60 156 80 Q 164 96 148 100 Q 142 116 122 110 Q 108 120 92 110 Q 72 112 72 96 Q 60 86 75 76 Z" fill="#DC4A3C" fill-opacity="0.22" stroke="#1A1817" stroke-width="2"/>
+              <path d="M 112 36 Q 108 60 116 80 Q 112 100 122 110" stroke="#1A1817" stroke-width="1.2" fill="none" opacity="0.4"/>
+              <path d="M 20 84 L 56 84 L 64 68 L 74 104 L 84 76 L 92 88 L 200 88" stroke="#1A1817" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="20" cy="84" r="3" fill="#DC4A3C"/>
+              <circle cx="200" cy="88" r="3" fill="#DC4A3C"/>
+            </svg>
+          </div>
+          <div class="v-slide-meta"><span class="cat-dot" style="background:#3D7A4A;"></span> Self-knowledge <span style="opacity:0.7">&middot; Research</span></div>
+          <h4>BrainFit</h4>
+          <p>Emotion tracking paired with voice-based interventions that meet you where you are.</p>
+          <div class="v-slide-foot">brainfit.tricyclelabz.com</div>
+        </article>
+
+        <!-- End card -->
+        <div class="v-slide v-slide-end">
+          <div>
+            <div style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.6;margin-bottom:14px;">More in research</div>
+            <h4>What pulls next?</h4>
+            <p>We test in public, fast. New bets are added when the pull is undeniable.</p>
+            <a href="#contact" class="t-btn-text" style="color:var(--bg);margin-top:8px;">Get the dispatch</a>
           </div>
         </div>
-      </div>
 
-      <!-- Pipeline -->
-      <div class="pipeline-list reveal">
-        <div class="pipeline-item">
-          <span class="pipeline-name">Unison</span>
-          <span class="pipeline-desc">Relationship intelligence for couples.</span>
-        </div>
-        <div class="pipeline-item">
-          <span class="pipeline-name">Undertone</span>
-          <span class="pipeline-desc">Communication pattern analysis.</span>
-        </div>
-        <div class="pipeline-item">
-          <span class="pipeline-name">Vocal Trace</span>
-          <span class="pipeline-desc">Pitch training through visual feedback.</span>
-        </div>
-        <div class="pipeline-item">
-          <span class="pipeline-name">Fetch Bites</span>
-          <span class="pipeline-desc">Recipe reels turned into usable cookbooks.</span>
-        </div>
+      </div>
+      <div class="v-carousel-controls">
+        <button class="v-arrow" id="v-prev" aria-label="Previous">&larr;</button>
+        <button class="v-arrow" id="v-next" aria-label="Next">&rarr;</button>
       </div>
     </div>
   </section>
 
-  <!-- Origin Story -->
-  <section class="section section--warm">
-    <div class="container">
-      <div class="section-grid section-grid--asymmetric">
-        <div class="section-label-col">
-          <span class="section-label reveal">Origin</span>
+  <!-- ============ 04 STORY ============ -->
+  <section id="story" class="sec sec-story reveal">
+    <div class="sec-head">
+      <div class="sec-num">04 / Origin</div>
+      <h2>Three brothers. A desert. A decision.</h2>
+      <div class="sec-meta">Joshua Tree &middot; 2025</div>
+    </div>
+    <div class="story-body">
+      <div class="story-illo">
+        <!-- Joshua Tree illustration -->
+        <svg viewBox="0 0 280 380" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+          <circle cx="78" cy="72" r="40" fill="#DC4A3C" fill-opacity="0.18" stroke="#DC4A3C" stroke-width="1" stroke-dasharray="2 3"/>
+          <path d="M 18 326 Q 140 322 262 328" stroke="#1A1817" stroke-width="1.5" fill="none"/>
+          <path d="M 36 326 Q 42 318 48 326 M 52 326 Q 58 320 62 326" stroke="#1A1817" stroke-width="1.2" fill="none"/>
+          <path d="M 210 328 Q 216 322 222 328 M 226 328 Q 232 322 238 328" stroke="#1A1817" stroke-width="1.2" fill="none"/>
+          <ellipse cx="160" cy="332" rx="18" ry="3" fill="#1A1817" opacity="0.3"/>
+          <path d="M 142 326 Q 138 290 144 252 Q 140 218 148 184 Q 144 152 150 122 Q 148 108 152 96" stroke="#1A1817" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path d="M 146 236 Q 116 226 96 208 Q 84 192 88 168" stroke="#1A1817" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+          <path d="M 148 188 Q 178 178 198 154 Q 206 138 202 118" stroke="#1A1817" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+          <path d="M 146 268 Q 172 262 186 248 Q 192 240 188 226" stroke="#1A1817" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+          <!-- Tufts at tips -->
+          <g>
+            <line x1="148" y1="78" x2="148" y2="74" stroke="#DC4A3C" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="157" y1="80" x2="163" y2="76" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="160" y1="89" x2="168" y2="87" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="157" y1="99" x2="164" y2="102" stroke="#DC4A3C" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="148" y1="104" x2="148" y2="110" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="139" y1="99" x2="132" y2="102" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="136" y1="89" x2="128" y2="87" stroke="#DC4A3C" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="139" y1="80" x2="133" y2="76" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+          </g>
+          <g>
+            <line x1="84" y1="152" x2="84" y2="148" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="92" y1="157" x2="97" y2="153" stroke="#DC4A3C" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="94" y1="166" x2="101" y2="166" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="89" y1="174" x2="93" y2="178" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="80" y1="174" x2="76" y2="178" stroke="#DC4A3C" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="76" y1="157" x2="71" y2="153" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+          </g>
+          <g>
+            <line x1="198" y1="102" x2="198" y2="96" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="208" y1="106" x2="214" y2="100" stroke="#DC4A3C" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="212" y1="116" x2="220" y2="116" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="208" y1="126" x2="214" y2="130" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="198" y1="130" x2="198" y2="136" stroke="#DC4A3C" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="190" y1="106" x2="184" y2="100" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+          </g>
+          <g>
+            <line x1="184" y1="212" x2="184" y2="208" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="192" y1="218" x2="197" y2="214" stroke="#DC4A3C" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="192" y1="228" x2="198" y2="230" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+            <line x1="180" y1="232" x2="176" y2="236" stroke="#1A1817" stroke-width="1.7" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <p class="story-lede">The inspiration began in the deserts of Joshua Tree, in a moment of unusual clarity. Three brothers found ourselves at the same inflection. Aligned in the problems we cared about, the skills we'd built, and where we were in life.</p>
+      <p class="story-body-text">
+        What became evident wasn't just a shared curiosity. It was a shared responsibility ... an opportunity to build something we could stand behind for our children, and the next generation. The name is precise. <em>Three wheels, three brothers, one vehicle moving forward together.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 05 TRIAD ============ -->
+  <section class="sec reveal">
+    <div class="sec-head">
+      <div class="sec-num">05 / Triad</div>
+      <h2>Three lenses,
+held in tension.</h2>
+      <div class="sec-meta">Scientist &middot; Strategist &middot; Innovator</div>
+    </div>
+    <div class="triad-grid">
+      <article class="triad-card">
+        <div class="triad-glyph">
+          <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="28" fill="none" stroke="#F2C441" stroke-width="3"/><circle cx="40" cy="40" r="6" fill="#F2C441"/></svg>
         </div>
-        <div class="section-content-col">
-          <h2 class="section-title reveal">Three brothers. A desert. A decision to leave something better.</h2>
-          <p class="section-text reveal">
-            The inspiration for Tricycle Labz began in the deserts of Joshua Tree, during
-            a moment of unusual clarity. Removed from our day-to-day environments, we found
-            ourselves recognising a clear convergence ... across the problems we were drawn to,
-            the skills we had developed over time, and the stage of life we were each entering.
-          </p>
-          <p class="section-text reveal">
-            What became evident was not just a shared curiosity, but a shared responsibility:
-            an opportunity to build something meaningful that could contribute to helping people
-            better understand themselves, relate to one another, and dramatically improve their
-            day-to-day capabilities. The moment also carried a personal dimension ... an intention
-            to create something we could stand behind for our children and the next generation.
-          </p>
+        <div class="triad-role">Evidence + Rigour</div>
+        <h3>The Scientist</h3>
+        <ul class="triad-traits">
+          <li><span class="dot" style="background:#F2C441;"></span> Data-driven by default</li>
+          <li><span class="dot" style="background:#F2C441;"></span> Deep domain expertise</li>
+          <li><span class="dot" style="background:#F2C441;"></span> Precision over speed</li>
+          <li><span class="dot" style="background:#F2C441;"></span> Trusts the process</li>
+        </ul>
+      </article>
+      <article class="triad-card">
+        <div class="triad-glyph">
+          <svg viewBox="0 0 80 80"><polygon points="40,10 70,68 10,68" fill="none" stroke="#1E3060" stroke-width="3"/><circle cx="40" cy="68" r="5" fill="#1E3060"/></svg>
         </div>
+        <div class="triad-role">Vision + Execution</div>
+        <h3>The Strategist</h3>
+        <ul class="triad-traits">
+          <li><span class="dot" style="background:#1E3060;"></span> Systems thinker</li>
+          <li><span class="dot" style="background:#1E3060;"></span> Executive gravitas</li>
+          <li><span class="dot" style="background:#1E3060;"></span> Builds coalitions</li>
+          <li><span class="dot" style="background:#1E3060;"></span> Plays the long game</li>
+        </ul>
+      </article>
+      <article class="triad-card">
+        <div class="triad-glyph">
+          <svg viewBox="0 0 80 80"><rect x="14" y="14" width="52" height="52" fill="none" stroke="#3D7A4A" stroke-width="3" rx="4"/><line x1="14" y1="14" x2="66" y2="66" stroke="#3D7A4A" stroke-width="3" stroke-dasharray="3 4"/></svg>
+        </div>
+        <div class="triad-role">Rule-Breaking + Possibility</div>
+        <h3>The Innovator</h3>
+        <ul class="triad-traits">
+          <li><span class="dot" style="background:#3D7A4A;"></span> Challenges assumptions</li>
+          <li><span class="dot" style="background:#3D7A4A;"></span> Sees around corners</li>
+          <li><span class="dot" style="background:#3D7A4A;"></span> High tolerance for ambiguity</li>
+          <li><span class="dot" style="background:#3D7A4A;"></span> Moves fast</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 06 VALUES ============ -->
+  <section class="sec reveal">
+    <div class="sec-head">
+      <div class="sec-num">06 / Values</div>
+      <h2>What we hold,
+operationally.</h2>
+      <div class="sec-meta">Five filters</div>
+    </div>
+    <div class="values-grid">
+      <div class="value-cell">
+        <div class="value-n">01</div>
+        <h3>Make the invisible visible</h3>
+        <p>We are drawn to problems people cannot quite name but feel every day. The gap between intention and behaviour. The pattern beneath the conflict. Clarity is a form of care.</p>
+      </div>
+      <div class="value-cell">
+        <div class="value-n">02</div>
+        <h3>Follow the problem, not the category</h3>
+        <p>We build across emotional development, relationships, self-knowledge, learning. We did not choose a vertical. We chose a conviction.</p>
+      </div>
+      <div class="value-cell">
+        <div class="value-n">03</div>
+        <h3>Build for the next generation</h3>
+        <p>Three brothers stood in the same desert and realised this had to mean something beyond ourselves. Every decision runs through one filter: does this leave something better?</p>
+      </div>
+      <div class="value-cell">
+        <div class="value-n">04</div>
+        <h3>Rigour earns the right to be bold</h3>
+        <p>Science demands evidence. Innovation refuses permission. Strategy knows when to listen to each. Both are always present.</p>
+      </div>
+      <div class="value-cell" style="grid-column: span 2;">
+        <div class="value-n">05</div>
+        <h3>Three lenses, one decision</h3>
+        <p>Scientist, Strategist, Innovator rarely agree immediately. The friction is the method. When all three converge, we move with full conviction.</p>
       </div>
     </div>
   </section>
 
-  <!-- The Triad -->
-  <section class="section" id="team">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">The Triad</span>
-        <h2 class="section-title">Three distinct archetypes. One coherent whole.</h2>
-        <p class="section-text section-text--narrow">
-          Each brother brings a fundamentally different lens, and the studio
-          holds all three in productive tension. When all three converge on
-          something, we move with full conviction. When we cannot converge, we keep looking.
-        </p>
-      </div>
-      <div class="triad-grid">
-        <div class="triad-card triad-card--scientist reveal">
-          <div class="triad-role">The Scientist</div>
-          <div class="triad-subtitle">Evidence + Rigour</div>
-          <ul class="triad-traits">
-            <li>Data-driven by default</li>
-            <li>Deep domain expertise</li>
-            <li>Precision over speed</li>
-            <li>Trusts the process</li>
-          </ul>
+  <!-- ============ 07 TEAM ============ -->
+  <section class="sec reveal">
+    <div class="sec-head">
+      <div class="sec-num">07 / Team</div>
+      <h2>Three brothers.
+Full bios soon.</h2>
+      <div class="sec-meta">To be detailed</div>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-portrait" style="border-color: #3D7A4A;">
+          <div class="team-ph">[ PORTRAIT ]</div>
         </div>
-        <div class="triad-card triad-card--strategist reveal">
-          <div class="triad-role">The Strategist</div>
-          <div class="triad-subtitle">Vision + Execution</div>
-          <ul class="triad-traits">
-            <li>Systems thinker</li>
-            <li>Executive gravitas</li>
-            <li>Builds coalitions</li>
-            <li>Plays the long game</li>
-          </ul>
+        <div class="team-role" style="color: #3D7A4A;">
+          <span class="dot" style="background: #3D7A4A;"></span> The Innovator
         </div>
-        <div class="triad-card triad-card--innovator reveal">
-          <div class="triad-role">The Innovator</div>
-          <div class="triad-subtitle">Rule-Breaking + Possibility</div>
-          <ul class="triad-traits">
-            <li>Challenges assumptions</li>
-            <li>Sees around corners</li>
-            <li>High tolerance for ambiguity</li>
-            <li>Moves fast</li>
-          </ul>
+        <h3>Soushiant Z.</h3>
+        <p class="team-tbd">Bio &middot; TBD</p>
+      </article>
+      <article class="team-card">
+        <div class="team-portrait" style="border-color: #F2C441;">
+          <div class="team-ph">[ PORTRAIT ]</div>
         </div>
-      </div>
+        <div class="team-role" style="color: #F2C441;">
+          <span class="dot" style="background: #F2C441;"></span> The Scientist
+        </div>
+        <h3>&mdash;</h3>
+        <p class="team-tbd">Bio &middot; TBD</p>
+      </article>
+      <article class="team-card">
+        <div class="team-portrait" style="border-color: #1E3060;">
+          <div class="team-ph">[ PORTRAIT ]</div>
+        </div>
+        <div class="team-role" style="color: #1E3060;">
+          <span class="dot" style="background: #1E3060;"></span> The Strategist
+        </div>
+        <h3>&mdash;</h3>
+        <p class="team-tbd">Bio &middot; TBD</p>
+      </article>
     </div>
   </section>
 
-  <!-- Values -->
-  <section class="section section--dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Values</span>
-        <h2 class="section-title">Not aspirational. Operational.</h2>
-      </div>
-      <div class="values-grid">
-        <div class="value-item reveal">
-          <h3 class="value-title">Make the invisible visible.</h3>
-          <p class="value-text">
-            We are drawn to the problems people cannot quite name but feel every day.
-            The gap between who someone intends to be and how they actually show up.
-            We build tools that bring those things into focus, because clarity is a form of care.
-          </p>
-        </div>
-        <div class="value-item reveal">
-          <h3 class="value-title">Follow the problem, not the category.</h3>
-          <p class="value-text">
-            We build across emotional development, relationships, self-knowledge, and creativity
-            because we kept finding the same thing in each: people are trying to do better, and
-            the tools they have are not good enough. We did not choose a vertical. We chose a conviction.
-          </p>
-        </div>
-        <div class="value-item reveal">
-          <h3 class="value-title">Build for the next generation.</h3>
-          <p class="value-text">
-            Every decision runs through a simple filter: does this leave something better for the
-            people coming after us? Short-term wins that compromise long-term integrity are not wins.
-          </p>
-        </div>
-        <div class="value-item reveal">
-          <h3 class="value-title">Rigour earns the right to be bold.</h3>
-          <p class="value-text">
-            The Scientist demands evidence before we claim anything. The Innovator refuses to wait
-            for permission. The Strategist knows when to listen to each. We do not use rigour as
-            an excuse to move slowly, or boldness as an excuse to skip the work.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section" id="process">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">How We Work</span>
-        <h2 class="section-title">High iteration. Low ego. Real signal.</h2>
-      </div>
-      <div class="process-steps">
-        <div class="process-step reveal">
-          <div class="process-step-number">01</div>
-          <div class="process-step-content">
-            <h3>Insight</h3>
-            <p>Identify a real human need backed by scientific literature and lived experience.</p>
-          </div>
-        </div>
-        <div class="process-step reveal">
-          <div class="process-step-number">02</div>
-          <div class="process-step-content">
-            <h3>Prototype</h3>
-            <p>Build the smallest version that tests the core hypothesis. Ship fast, learn faster.</p>
-          </div>
-        </div>
-        <div class="process-step reveal">
-          <div class="process-step-number">03</div>
-          <div class="process-step-content">
-            <h3>Validate</h3>
-            <p>Put it in front of real people. Measure what matters. Follow real demand signals.</p>
-          </div>
-        </div>
-        <div class="process-step reveal">
-          <div class="process-step-number">04</div>
-          <div class="process-step-content">
-            <h3>Refine or Kill</h3>
-            <p>Double down on what works. Walk away from what doesn't. No sunk-cost thinking.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA / Contact Form -->
-  <section class="section section--cta" id="contact">
-    <div class="container">
-      <div class="cta-content reveal">
-        <h2 class="cta-title">Let's build something that matters.</h2>
-        <p class="cta-text">
-          We are looking for partners who think long-term, collaborators who share our values,
-          and exceptional builders who want to do meaningful work.
-        </p>
-        <form class="contact-form" id="contact-form" onsubmit="handleContactSubmit(event)">
-          <!-- Honeypot field — bots fill this, humans never see it -->
-          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="contact-name">Name</label>
-              <input type="text" id="contact-name" name="name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label for="contact-email">Email</label>
-              <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
-            </div>
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="sec sec-contact" style="background: var(--signal-red);">
+    <div class="contact-inner reveal">
+      <span class="contact-eyebrow">&mdash; Get in touch</span>
+      <h2 class="contact-h">
+        If something we're building<br>
+        resonates, <span class="emi">tell us why</span>.
+      </h2>
+      <form class="contact-form" id="contact-form" onsubmit="handleContactSubmit(event)">
+        <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" required>
           </div>
           <div class="form-group">
-            <label for="contact-interest">I'm interested as a ...</label>
-            <select id="contact-interest" name="interest" required>
-              <option value="" disabled selected>Select one</option>
-              <option value="investor">Investor</option>
-              <option value="partner">Strategic Partner</option>
-              <option value="collaborator">Builder / Collaborator</option>
-              <option value="other">Other</option>
-            </select>
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
           </div>
-          <div class="form-group">
-            <label for="contact-message">Message <span class="form-optional">(optional)</span></label>
-            <textarea id="contact-message" name="message" rows="3" placeholder="Tell us what you're thinking ..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--large contact-submit" id="contact-submit">Get in Touch</button>
-        </form>
-        <div class="form-success" id="form-success" style="display:none;">
-          <h3 class="form-success-title">Thank you.</h3>
-          <p class="form-success-text">We will be in touch soon.</p>
         </div>
+        <div class="form-group">
+          <label for="contact-interest">Interested as</label>
+          <select id="contact-interest" name="interest" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="investor">Investor</option>
+            <option value="partner">Strategic Partner</option>
+            <option value="collaborator">Builder / Collaborator</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message <span class="form-optional">(optional)</span></label>
+          <textarea id="contact-message" name="message" rows="2" placeholder="Tell us what you're thinking ..."></textarea>
+        </div>
+        <button type="submit" class="t-btn t-btn-primary contact-submit" id="contact-submit" style="background: var(--charcoal); width: 100%;">Get in touch <span>&rarr;</span></button>
+      </form>
+      <div class="form-success" id="form-success" style="display:none;">
+        <h3 class="form-success-title">Thank you.</h3>
+        <p class="form-success-text">We will be in touch soon.</p>
+      </div>
+      <div class="contact-meta">
+        <span>hello@tricyclelabz.com</span>
+        <span>Vancouver &middot; Joshua Tree</span>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <svg class="footer-logo-mark" viewBox="0 0 40 40" width="28" height="28" fill="none">
-            <circle cx="12" cy="26" r="8" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="28" cy="26" r="8" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="20" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <span class="footer-name">Tricycle Labz</span>
-        </div>
-        <p class="footer-tagline">Consumer technology for human psychological flourishing.</p>
-        <span class="footer-copy">&copy; 2026 Tricycle Labz. All rights reserved.</span>
+  <!-- ============ FOOTER ============ -->
+  <footer class="t-footer">
+    <div class="t-footer-grid">
+      <div>
+        <div class="t-footer-wm">Tricycle<br>Labz<span class="period">.</span></div>
+        <p>A venture studio building AI-native products for self-awareness, agency, and productivity.</p>
       </div>
+      <div>
+        <h6>Ventures</h6>
+        <div class="t-footer-links">
+          <a>Loomi</a>
+          <a>Roundtable</a>
+          <a>Vocal Trace</a>
+          <a>Fetch Bites</a>
+          <a>You.OS</a>
+          <a>Undertone</a>
+          <a>Unison</a>
+          <a>BrainFit</a>
+        </div>
+      </div>
+      <div>
+        <h6>Studio</h6>
+        <div class="t-footer-links">
+          <a href="#approach">Approach</a>
+          <a href="#focus">Focus</a>
+          <a href="#story">Story</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h6>Contact</h6>
+        <div class="t-footer-links">
+          <a href="mailto:hello@tricyclelabz.com">hello@tricyclelabz.com</a>
+          <a>LinkedIn</a>
+          <a>Vancouver &middot; Joshua Tree</a>
+        </div>
+      </div>
+    </div>
+    <div class="t-footer-base">
+      <span>&copy; Tricycle Labz &middot; 2026</span>
+      <span>Three wheels. One vehicle.</span>
     </div>
   </footer>
 

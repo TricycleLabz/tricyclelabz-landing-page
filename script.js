@@ -1,5 +1,6 @@
 /* ============================================================
    Tricycle Labz — Script
+   Editorial layout · May 2026
    ============================================================ */
 
 (function () {
@@ -19,32 +20,13 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     );
 
     elements.forEach(function (el, i) {
-      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+      el.style.transitionDelay = (i % 5) * 0.06 + 's';
       observer.observe(el);
     });
-  }
-
-  /* --- Nav Scroll State --- */
-  function initNavScroll() {
-    var nav = document.getElementById('nav');
-    if (!nav) return;
-
-    var scrolled = false;
-
-    function check() {
-      var shouldBeScrolled = window.scrollY > 60;
-      if (shouldBeScrolled !== scrolled) {
-        scrolled = shouldBeScrolled;
-        nav.classList.toggle('is-scrolled', scrolled);
-      }
-    }
-
-    window.addEventListener('scroll', check, { passive: true });
-    check();
   }
 
   /* --- Mobile Nav Toggle --- */
@@ -59,7 +41,7 @@
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    links.querySelectorAll('.nav-link').forEach(function (link) {
+    links.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         links.classList.remove('is-open');
         toggle.classList.remove('is-active');
@@ -79,98 +61,90 @@
         if (!target) return;
 
         e.preventDefault();
-
-        var navHeight = document.getElementById('nav').offsetHeight;
-        var top = target.getBoundingClientRect().top + window.scrollY - navHeight - 20;
-
+        var top = target.getBoundingClientRect().top + window.scrollY - 80;
         window.scrollTo({ top: top, behavior: 'smooth' });
       });
     });
   }
 
-  /* --- Hero Emblem Parallax --- */
-  function initParallax() {
-    var emblem = document.querySelector('.hero-emblem');
-    if (!emblem) return;
+  /* --- Ventures Carousel --- */
+  function initCarousel() {
+    var track = document.getElementById('v-track');
+    var prev = document.getElementById('v-prev');
+    var next = document.getElementById('v-next');
+    if (!track) return;
 
-    var ticking = false;
+    var scrollAmount = function () { return track.clientWidth * 0.7; };
 
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        requestAnimationFrame(function () {
-          var scroll = window.scrollY;
-          var offset = scroll * 0.15;
-          emblem.style.transform = 'translateY(' + offset + 'px)';
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
+    if (next) {
+      next.addEventListener('click', function () {
+        track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+      });
+    }
+    if (prev) {
+      prev.addEventListener('click', function () {
+        track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+      });
+    }
+
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+      if (e.key === 'ArrowLeft') track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    });
   }
 
   /* --- Init --- */
   document.addEventListener('DOMContentLoaded', function () {
     initReveal();
-    initNavScroll();
     initNavToggle();
     initSmoothScroll();
-    initParallax();
+    initCarousel();
   });
-
 })();
 
 /* --- Contact Form Submission (Google Sheets) --- */
-/* Outside the IIFE so the inline onsubmit can reach it */
-function handleContactSubmit(event) {
-    event.preventDefault();
+window.handleContactSubmit = function handleContactSubmit(event) {
+  event.preventDefault();
 
-    // Honeypot check — if a bot filled the hidden field, silently reject
-    var honeypot = event.target.querySelector('[name="website"]');
-    if (honeypot && honeypot.value !== '') {
-      return false;
-    }
+  // Honeypot check
+  var honeypot = event.target.querySelector('[name="website"]');
+  if (honeypot && honeypot.value !== '') {
+    return false;
+  }
 
-    var formData = new FormData(event.target);
-    var data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      interest: formData.get('interest'),
-      message: formData.get('message') || '',
-      source: 'tricyclelabz_landing',
-      submitted_at: new Date().toISOString()
-    };
+  var formData = new FormData(event.target);
+  var data = {
+    name: formData.get('name'),
+    email: formData.get('email'),
+    interest: formData.get('interest'),
+    message: formData.get('message') || '',
+    source: 'tricyclelabz_landing',
+    submitted_at: new Date().toISOString()
+  };
 
-    var submitBtn = document.getElementById('contact-submit');
-    var originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
+  var submitBtn = document.getElementById('contact-submit');
+  var originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
 
-    // ---------------------------------------------------------------
-    // GOOGLE SHEETS ENDPOINT
-    // Replace the URL below with your Tricycle Labz Apps Script
-    // Web App URL after deploying the sheet connector.
-    // ---------------------------------------------------------------
-    var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbywGBlz68g5LIAY6t3cMad6toRZF1SO7kOYSneT4PrRwTg2VcQz9iDOD5ofInZT0sNlVw/exec';
+  var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbywGBlz68g5LIAY6t3cMad6toRZF1SO7kOYSneT4PrRwTg2VcQz9iDOD5ofInZT0sNlVw/exec';
 
-    fetch(SHEETS_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(data)
-    })
-    .then(function () {
-      // With mode: 'no-cors' we cannot read the response,
-      // but the data is sent. Show success state.
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    })
-    .catch(function () {
-      // Even on catch with no-cors, data likely went through
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    })
-    .finally(function () {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    });
-}
+  fetch(SHEETS_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify(data)
+  })
+  .then(function () {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  })
+  .catch(function () {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  })
+  .finally(function () {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  });
+};

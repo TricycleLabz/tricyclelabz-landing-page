@@ -351,8 +351,8 @@ img { display: block; max-width: 100%; }
   color: var(--warm-gray);
   text-align: right;
   padding-bottom: 6px;
-  white-space: nowrap;
-  justify-self: end;
+  grid-column: 1 / -1;
+  margin-top: -16px;
 }
 
 /* ============================================================

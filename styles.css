@@ -697,9 +697,14 @@ img { display: block; max-width: 100%; }
   background: var(--paper);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  max-width: 1320px;
-  margin: 0 auto;
+  max-width: none;
   padding: 128px 48px;
+}
+.sec-story .sec-head,
+.sec-story .story-body {
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .story-body {
   display: grid;

@@ -737,14 +737,12 @@ img { display: block; max-width: 100%; }
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin: 0;
-  max-width: 24ch;
 }
 .story-body-text {
   font-size: 17px;
   line-height: 1.6;
   color: var(--ink-soft);
   margin: 0;
-  max-width: 48ch;
 }
 .story-body-text em {
   font-family: var(--serif);

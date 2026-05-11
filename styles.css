@@ -319,7 +319,7 @@ img { display: block; max-width: 100%; }
 }
 .sec-head {
   display: grid;
-  grid-template-columns: 140px 1fr 200px;
+  grid-template-columns: 140px 1fr auto;
   gap: 32px;
   margin-bottom: 64px;
   align-items: end;
@@ -351,6 +351,7 @@ img { display: block; max-width: 100%; }
   color: var(--warm-gray);
   text-align: right;
   padding-bottom: 6px;
+  white-space: nowrap;
 }
 
 /* ============================================================

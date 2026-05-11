@@ -697,14 +697,9 @@ img { display: block; max-width: 100%; }
   background: var(--paper);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  max-width: none;
-  padding: 128px 48px;
-}
-.sec-story .sec-head,
-.sec-story .story-body {
   max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 128px 48px;
 }
 .story-body {
   display: grid;
@@ -732,10 +727,10 @@ img { display: block; max-width: 100%; }
 }
 .story-lede {
   font-family: var(--display);
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.15;
+  line-height: 1.25;
   margin: 0;
 }
 .story-body-text {

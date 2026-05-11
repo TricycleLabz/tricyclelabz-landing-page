@@ -708,19 +708,20 @@ img { display: block; max-width: 100%; }
 }
 .story-body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 400px 1fr;
+  gap: 64px;
   align-items: start;
 }
 .story-illo {
   background: var(--off-white);
   border: 1px solid var(--line);
   border-radius: 24px;
-  padding: 32px;
+  padding: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 1;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
 }
 .story-text {
@@ -1154,7 +1155,7 @@ img { display: block; max-width: 100%; }
   .focus-card { min-height: auto; }
   .ventures-grid, .ventures-grid .vcard-lg { grid-template-columns: 1fr; grid-column: span 1; }
   .story-body { grid-template-columns: 1fr; gap: 24px; }
-  .story-illo { min-height: 240px; max-height: 300px; }
+  .story-illo { width: 100%; height: auto; aspect-ratio: 1; }
   .triad-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }

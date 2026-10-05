@@ -1,0 +1,5 @@
+# GitHub Pages (Jekyll) build config.
+# Keep internal repo docs out of the public site.
+exclude:
+  - CLAUDE.md
+  - CONTRIBUTING.md
